@@ -1,0 +1,30 @@
+---
+- name: Install / Configure Docker Repository
+  hosts: elk
+  become: true
+  tasks:
+  - name: Make sure the Docker repo key is installed
+    apt_key:
+      id: 9DC858229FC7DD38854AE2D88D81803C0EBFCD88
+      url: https://download.docker.com/linux/ubuntu/gpg
+      state: present
+  - name: Make sure Docker repo is installed
+    apt_repository:
+      repo: deb [arch=amd64] https://download.docker.com/linux/ubuntu bionic stable
+      state: present
+  - name: docker-ce
+    apt:
+      update_cache: yes
+      name: docker-ce
+      state: present
+  - name: docker-ce-cli
+    apt:
+      update_cache: yes
+      name: docker-ce-cli
+      state: present
+  - name: containerd.io
+    apt:
+      update_cache: yes
+      name: containerd.io
+      state: present
+
