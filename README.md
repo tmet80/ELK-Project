@@ -90,13 +90,8 @@ Filebeat collects system log data and Metricbeat collects performance data such 
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
 
 SSH into the control node and follow the steps below:
-- Copy the _____ file to _____.
-- Update the _____ file to include...
-- Run the playbook, and navigate to ____ to check that the installation worked as expected.
-
-_TODO: Answer the following questions to fill in the blanks:_
-- _Which file is the playbook? Where do you copy it? The playbook file that has been copied is filebeat-config.yml; filebeat=config is copied into /etc/filebeat/filebeat.yml
-- _Which file do you update to make Ansible run the playbook on a specific machine? How do I specify which machine to install the ELK server on versus which to install Filebeat on? The hosts file is updated to ensure that the playbook runs on specific machines. To specify the maching to install ELK server ensure that the host line in the playbook is set to elk. For Filebeat, ensure that the host is set to webservers to install the playbook on the webserver machines.
-- _Which URL do you navigate to in order to check that the ELK server is running? http://52.242.76.186.5601
+- Copy the elk-playbook file to /etc/ansible/.
+- Update the elk-playbook file to include ports 5044, 5601 & 9200.
+- Run the ansible-playbook elk-playbook.yml, and navigate to http://52.242.76.186:5601 to check that the installation worked as expected.
 
 _As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
