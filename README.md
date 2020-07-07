@@ -93,5 +93,3 @@ SSH into the control node and follow the steps below:
 - Copy the elk-playbook file to /etc/ansible/.
 - Update the elk-playbook file to include ports 5044, 5601 & 9200.
 - Run the ansible-playbook elk-playbook.yml, and navigate to http://52.242.76.186:5601 to check that the installation worked as expected.
-
-_As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
