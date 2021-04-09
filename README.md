@@ -34,7 +34,6 @@ Integrating an ELK server allows users to easily monitor the vulnerable VMs for 
 Filebeat monitors log files and collects log event and forwards te information to Elasticsearch and/or Logstash. What does Metricbeat record? Metricbeat collects data (CPU usage, Memory usage, Disk usage) from operating systems and running services to monitor performance.
 
 The configuration details of each machine may be found below.
-Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdown_tables) to add/remove values from the table.
 
 | Name                 | Function          | IP Address    | Operating System |
 |----------------------|-------------------|---------------|------------------|
